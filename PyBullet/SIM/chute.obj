@@ -1,0 +1,20 @@
+# Simple two-plane right-angle chute (floor + wall)
+# Axis convention matches ChutePoseAnalysis.m's local chute frame exactly:
+#   X = slide/length axis   (roll rotates about this axis; floor+wall share this span)
+#   Y = floor-recede axis   (floor occupies Y<=0; wall seam at Y=0; pitch rotates about this axis)
+#   Z = wall-height axis    (floor at Z=0; wall rises Z>=0)
+# length=1.0 (X)  depth=0.6 (Y)  height=0.6 (Z)
+v -16.00000 -8.0000 0.000000
+v -16.00000 0.000000 0.000000
+v 16.00000 0.000000 0.000000
+v 16.00000 -8.0000 0.000000
+v -16.00000 0.000000 0.000000
+v -16.00000 0.000000 8.0000
+v 16.00000 0.000000 8.0000
+v 16.00000 0.000000 0.000000
+
+f 1 3 2
+f 1 4 3
+f 5 7 6
+f 5 8 7
+f 3 4 7
